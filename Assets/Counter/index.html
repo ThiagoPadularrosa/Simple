@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>My Counter</title>
+                <link rel="stylesheet" href="styles.css">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a62c003719.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Counter</h1>
+    </div>
+        <span id="display">0</span>
+            <div class="counter-container">
+                <button id="btn1">DECREASE</button>
+                    <button id="btn2">RESET</button>
+                <button id="btn3">INCREASE</button> 
+            </div>
+        <nav>    
+            <button id="btnopen1" class="btn-gear">
+                <i class="fa-solid fa-gear gear"></i>
+            </button>
+             <button id="btnopen2" class="btn-cir-info">
+                <i class="fa-solid fa-circle-info cir-info"></i>
+            </button>
+
+                <!-- MODALES -->
+                <dialog id="mimodal1" class="modal1">
+                    <button id="btnclose1" class="close-modal1">
+                        <i class="fa-solid fa-xmark xmark1"></i>
+                    </button>
+                    <div class="contenido1">      
+                        <p>Change the color of the Background</p>
+                    </div>
+                </dialog>
+
+            <dialog id="mimodal2" class="modal2">
+                <button id="btnclose2" class="close-modal2">
+                    <i class="fa-solid fa-xmark xmark2"></i>
+                </button>
+                <div class="contenido2">
+                    <h1>The Counter</h1>
+                    <p>A simple tool for counting things and keeping track of numbers. Learn more</p>
+                    <button class="buyc">
+                    Buy me a coffee ;3
+                    </button>
+                    <p>By Thiago Padularrosa</p>
+                </div>
+            </dialog>
+        </nav>
+    <script src="script.js"></script>
+</body>
+</html>

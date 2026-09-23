@@ -1,0 +1,274 @@
+/*
+
+Global Syles
+
+*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #f1f5f8;
+}
+
+
+/* Global Styles */
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-weight: 700;
+    font-family: 'Inter';
+    font-size: 3rem;
+    letter-spacing: 4px;
+    color: rgb(34, 32, 32);
+    pointer-events: none;
+    user-select: none;
+    top: 2.3rem;
+}
+.title {
+    position: relative;
+    text-decoration: none;
+}
+.title::after     {
+    content: '';
+    position: absolute;
+    width: 5%; /*Largo del subrayado*/
+    height: 4px; /*Grosor del subrayado*/
+    bottom: 39%;
+    left: 47.3%;
+    background-color: #43a1ff;
+}
+*
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f1f5f8;
+    margin: 0;
+}
+/*
+
+Card config
+
+*/
+.card {
+    display: block;
+    position: relative;
+    width: 49rem;
+    height: 30rem;
+    left: 0rem;
+    bottom: 0.5rem;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-family: 'Inter';
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -ms-user-select: none !important;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.review {
+    display: none;
+    position: relative;
+}   
+.review.active {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: center;
+}
+/*
+================
+Card styles
+================
+*/
+.card-img {
+    width: 160px;
+    height: 160px; 
+    position: relative;
+    border-radius: 50%;
+    margin-top: 1rem;
+    object-fit: cover;
+    user-select: none;
+    z-index: 2;
+}  
+.img-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+} 
+.img-container::before { /*Solo se puede tener un before y/o after este es el ciruclo azul*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #3b82f6;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translate(0.5rem, 12px); 
+}
+.img-container::after { /*Comillas dentro de un circulo azul*/
+  font-family: "Font Awesome 5 Free"; /*De donde saco las comillas*/
+  font-weight: 900;
+  content: "\f10e"; /*El mismo icono de las comillas*/
+  font-size: 1.3rem;
+
+    /*Aca empieza la configuración del circulo detras de las
+    comillas*/
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+
+    /*Al solamente poder tener un after/before en un elemento se hace el circulo de las comillas
+    dentro del mismo, es decir donde están las comillas, osea en el mismo after*/
+
+  border-radius: 50%;
+  background: #3b82f6; /*Este es el circulo (color)*/
+  color: white; /*Acá están las comillas (color)*/
+
+  transform: translateY(59%);
+  z-index: 2;
+}
+.card-titles {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.card-name {
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: bold; 
+    letter-spacing: 3px;
+    user-select: none;
+    transform: translate(0%, 30px);
+    color: #14314d;
+}
+.card-career {
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Inter';
+    color: #43a1ff;
+    user-select: none;
+    transform: translate(0%, 20px);
+}
+.review p {
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+    max-width: 100% ;
+    white-space: pre-line;
+    pointer-events: none;
+    user-select: none;
+    transform: translate(0%, -0.3rem);
+}
+/*
+
+Buttons
+
+*/
+.buttons-container {
+    display: flex;
+    position: relative;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.next-Btn, 
+.previous-Btn {
+    font-size: 1.7rem;
+    background-color: transparent !important;
+    border-color: transparent !important;
+
+    place-items: center;
+    padding: -5px -5px;
+    cursor: pointer;
+    user-select: none;
+
+    color: rgb(116, 192, 252) !important;
+}
+.next-Btn {
+    transform: translate(0.4rem, 0.5rem);
+}
+.previous-Btn {
+    transform: translate(-0.6rem, 0.5rem);
+
+}
+.next-Btn i,
+.previous-Btn i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 28px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.next-Btn:hover i, 
+.previous-Btn:hover i {
+    color: rgb(0, 162, 255) !important; /*Cuando el icono tenga un color Inline o heredade de otra clase (fa solid) usar important*/
+    transform: scale(1.2);
+}
+.next-Btn:focus i, 
+.previous-Btn:focus i {
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/*Random Button*/
+.random-Btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    position: fixed;
+    width: fit-content;
+    text-decoration: none;
+    padding: 0;
+    background-color: white;
+    padding: 3px 20px;
+    color: #43a1ff;
+    border-radius: 12px;
+    border: 1.7px solid #000000;
+    min-width: 110px;
+    transform: translate(-3.7rem, 1rem);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+.random-Btn:hover {
+    background-color: rgb(67, 161, 255) !important;
+    border-color: #ffffff;
+    color: black;   
+}
+.random-Btn:focus {
+    outline-width: 2rem;
+    background: white ;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.6);
+}

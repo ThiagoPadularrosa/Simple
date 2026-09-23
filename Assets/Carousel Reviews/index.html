@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Reviews</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a62c003719.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <section>
+      <!--title-->
+      <h1 class="title">Our Reviews</h1>
+
+      <!-- Contenedor Principal -->
+      <div class="card">
+        <!-- All the Reviews -->
+        <div class="review active">
+          <div class="img-container">
+            <img src="./Images/indian.jpg" alt="foto de un web developer" class="card-img">
+          </div>
+          <h2 class="card-name">Ahmed Zaia</h2>
+          <h3 class="card-career">Web Developer</h3>
+          <p>
+            I enjoy building things for the web and understanding how everything works
+            behind the scenes. I'm always trying to write cleaner code and improve step by step while
+            learning new tools and better ways to solve problems.
+          </p>
+        </div>
+
+        <div class="review">
+          <div class="img-container">
+            <img src="./Images/ey harris.jpg" alt="Foto 2" class="card-img">
+          </div>
+          <h2 class="card-name">Sofia Stailford</h2>
+          <h3 class="card-career">Web Designer</h3>
+          <p>
+            I like creating designs that feel simple and easy to use, not just something that looks nice.
+            I focus on small details that make everything feel smoother and more natural for the user.
+            Designs are my life, without them I wouldn't be me.
+          </p>
+        </div>
+
+        <div class="review">
+          <div class="img-container">
+            <img src="./Images/ahroa vas vaver.jpg" alt="Foto 3" class="card-img">
+          </div>
+          <h2 class="card-name">Peter Parker</h2>
+          <h3 class="card-career">Inter</h3>
+          <p>
+            I'm still learning, but I try to improve every day and understand how things really work.
+            I ask questions, stay curious, and do my best to support the team while gaining experience.
+            For last and not least, i consider myself the best employee to work with.
+          </p>
+        </div>
+
+        <div class="review">
+          <div class="img-container">
+            <img src="./Images/ya te.jpg" alt="Foto 4" class="card-img">
+          </div>
+          <h2 class="card-name">Michael Fascho</h2>
+          <h3 class="card-career">The Boss</h3>
+          <p>
+            I focus on keeping the team organized and moving in the right direction.
+            I like solving problems, helping others when needed,
+            and making sure we reach our goals efficiently.
+          </p>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+          <button class="previous-Btn">
+            <i class="fa-solid fa-angle-left left-ang" style="color: rgb(116, 192, 252);" tabindex="0"></i>
+          </button>
+          <button class="next-Btn">
+            <i class="fa-solid fa-angle-right right-ang" style="color: rgb(116, 192, 252);" tabindex="0"></i>
+          </button>
+        </div>
+        <button class="random-Btn">Random</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

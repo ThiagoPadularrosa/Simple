@@ -1,0 +1,40 @@
+# Collector config file
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+    timeout: 10s
+
+exporters:
+  otlp_grpc/jaeger:
+    endpoint: jaeger:4317
+    tls:
+      insecure: true
+  debug:
+    verbosity: basic
+
+  otlp_http/grafana:
+    endpoint: ${env:OTEL_EXPORTER_OTLP_ENDPOINT}
+    headers:
+      authorization: "Basic ${env:GRAFANA_OTLP_TOKEN}"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp_http/grafana, debug]  
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp_http/grafana]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp_http/grafana]

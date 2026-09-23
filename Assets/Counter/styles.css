@@ -1,0 +1,352 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    overflow: hidden;    /*Sirve para que no se pueda hacer scroll en la pagina*/
+
+    background-color: #f1f5f8;
+}
+
+
+/*
+
+Contenedores
+
+*/
+.header-container {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;;
+    font-weight: 700;
+    display: inline-block;
+    position: fixed;
+    bottom: 75%;
+    width: 100%;
+    height: 40px;
+    color: rgb(20, 25, 87);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-parrafo li {
+    position: relative;
+    padding-top: 0px;
+    right: 40rem;
+    top: 20rem;
+    left: -45rem;
+}
+/*
+---------
+
+    Botones
+
+---------
+*/
+button:focus:not(.btn-gear)
+:not(.btn-cir-info)
+:not(.close-modal1)
+:not(.close-modal2)
+:not(.buyc) {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6;
+}
+#btn1 {
+    display: inline-block;
+    position: fixed;
+    bottom: 35%;
+    left: 40%;
+    transform: translate(-50%, 50%);
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    letter-spacing: 5px;
+}
+#btn1:hover {
+    background-color: rgb(255, 0, 0, 0.8);
+    cursor: pointer;
+}
+#btn2 {
+    display: inline-block;
+    position: fixed;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    letter-spacing: 5px;
+}
+#btn2:hover {
+    background-color: rgb(0, 0, 0) !important;
+    color: white !important;
+    cursor: pointer;
+}
+#btn3 {
+    display: inline-block;
+    position: fixed;
+    bottom: 35%;
+    left: 60%;
+    transform: translate(-50%, 50%);
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0  );
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    letter-spacing: 5px;
+}
+#btn3:hover {
+    background-color: rgb(0, 253, 13, 0.8) !important;
+    cursor: pointer;
+}
+#display {
+    display: inline-block;
+    position: fixed;
+    bottom: 53%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-variant-numeric: tabular-nums;   
+    font-size: 8rem;
+    font-weight: 600;
+    font-family: 'inter', 'sans-serif';
+    letter-spacing: 1px;
+}
+.buyc {
+    background-color: #ff4747;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    border-color: none;
+    padding: 25px 25px; /*Para controlar el tamaño del boton*/
+}
+/* 
+---------
+
+Barra de navegación
+
+---------
+*/  
+nav {
+    display: flex;
+    position: fixed;
+    background-color: #f1f5f8;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 17.5%;
+    height: 42px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+.btn-gear {
+    display: flex;
+    position: fixed; /*Sirve para que el elemento en cuestión se quede quieto en el lugar sin importar lo que haga el usuario*/
+    padding: 0;
+    cursor: pointer;
+    background-color: none !important;
+    background: transparent !important; 
+    border: none !important;
+    justify-content: center;
+    align-items: center;
+    margin-right: -5rem;
+}
+.btn-gear:hover {
+    background-color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.gear {
+    font-size: 20px;
+    transition: transform 0.8 ease-in-out;
+}
+.gear-config:hover {
+    transform: scale(1.5);
+}
+.btn-cir-info {
+    display: flex;
+    position: fixed;
+    padding: 0;
+    cursor: pointer;
+    background-color: none !important;
+    background: transparent !important;
+    border: none !important;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4.7rem;
+}
+.btn-cir-info:hover {
+    background-color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.cir-info {
+    font-size: 20px;
+    transition: transform 0.8 ease-in-out;
+}
+.cir-info:hover {
+    transform: scale(1.5);
+}
+/*
+---------
+
+Modales/Dialogs Configs
+
+---------
+*/
+dialog {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    position: relative; /*Es necesario para poder posicionar el icono despues en la parte superior derecha*/
+    width: 300px
+}
+dialog::backdrop {
+    background-color: rgb(0, 0, 0); /*Fondo oscuro*/
+}
+#mimodal1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 50%;
+    transition: 0.3 all ease;
+    background-color: black;
+
+    overflow: visible;
+}
+.contenido1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    pointer-events: none;
+}
+/*Todo esto para poder posicionar el icono en la parte superior derecha (basicamente lo que yo queria)*/
+.close-modal1 {
+    display: flex;
+    position: absolute;
+    top: -25rem;
+    right: -28rem;
+    border-radius: 50%;
+    border: none;
+    background: transparent !important;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    padding: 5px;
+    
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+}
+.close-modal1:hover {
+    background-color: rgb(255, 255, 255) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+.close-modal1 i {
+    transition: color 0.8s ease;
+}
+.close-modal1:hover i {
+    color: black !important;
+}
+.xmark1 {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+.close-modal2 {
+    display: flex;
+    position: absolute;
+    top: -17rem;
+    right: -28rem;
+    border-radius: 50%;
+    border: none;
+    background: transparent !important;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    padding: 5px;
+    
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+}
+.close-modal2:hover {
+    background-color: rgb(255, 255, 255) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+.close-modal2 i {
+    transition: color 0.8s ease;
+}
+.close-modal2:hover i {
+    color: black !important;
+}
+.xmark2 {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+#mimodal2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 50%;
+    transition: 0.3 all ease;
+    background-color: black;
+
+    overflow: visible;
+}
+.contenido2 p {
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    pointer-events: none;
+    line-height: 1.8;
+    text-wrap: balance; /*Para evitar que haya una sola palabra en un renglon*/
+    line-clamp: 5;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.contenido2 h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
+
+
+
+
